@@ -5,7 +5,7 @@ require(car)
 require(Rmisc)
 
 # Rmisc::CI
-# dunn.test::dunnTest
+# FSA::dunnTest
 # car::leveneTest
 # gplots::plotCI
 # gplots::plotmeans
@@ -36,7 +36,7 @@ auto.anova <- function(formula,data=NULL,
   }else if (assumption=="F"|assumption==2) {
     boxplot(formula)
     print(kruskal.test(formula))
-    print(dunn.test::dunnTest(formula))
+    print(FSA::dunnTest(formula))
   }
 }
 
