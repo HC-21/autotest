@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+    importFrom("graphics", "abline", "boxplot", "par")
+    importFrom("stats", "TukeyHSD", "anova", "aov", "as.formula",
+               "binom.test", "chisq.test", "cor.test", "fisher.test",
+               "kruskal.test", "lm", "qqline", "qqnorm", "t.test",
+               "wilcox.test")
