@@ -4,3 +4,5 @@ exportPattern("^[[:alpha:]]+")
                "binom.test", "chisq.test", "cor.test", "fisher.test",
                "kruskal.test", "lm", "qqline", "qqnorm", "t.test",
                "wilcox.test")
+S3method(auto.t,numeric)
+S3method(auto.t,formula)

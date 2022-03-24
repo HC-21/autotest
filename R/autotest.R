@@ -132,7 +132,7 @@ auto.lm<- function(formula, data=NULL,xname=substitute(x),yname=substitute(y)){
 
 auto.t <- function(x, ...) UseMethod("auto.t")
 
-auto.t.default <- function(x, y = NULL,mu = 0, paired = FALSE,xname = as.character(deparse(substitute(x))),yname = as.character(deparse(substitute(y))),...)
+auto.t.numeric <- function(x, y = NULL,mu = 0, paired = FALSE,xname = as.character(deparse(substitute(x))),yname = as.character(deparse(substitute(y))),...)
 {
   if (is.null(y)) {
     #One sample----
