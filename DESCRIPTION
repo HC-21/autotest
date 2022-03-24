@@ -1,11 +1,20 @@
 Package: autotest
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Automatic inferential tests
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Tsz-Hong Chan
+Maintainer: Tsz-Hong Chan <tszhongchan4@gmail.com>
+Description: Select, Execute and Visualise inferential tests 
+    with a single function.
+    Current version includes Chi-Square test, t-tests, ANOVA, 
+    Pearson's Correlation, linear regression and 
+    their non-parametric counter parts including Kruskal-Wallice test,
+    Wilcox ranked sum test, and Spearman's ranked sum test 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+    Rmisc,
+    FSA,
+    car,
+    gplots
