@@ -17,8 +17,8 @@ require(Rmisc)
 # gplots::plotmeans
 
 auto.anova <- function(formula,data=NULL,
-                       xname=NULL,
-                       yname=NULL){
+                       xname=substitute(x),
+                       yname=substitute(y)){
   require(gplots)
   require(FSA)
   #format data
@@ -35,12 +35,12 @@ auto.anova <- function(formula,data=NULL,
   par(mfrow=c(1,1))
   assumption<-readline("does the model fit assumption? reply T or F :")
   if (assumption=="T"|assumption==1) {
-    gplots::plotmeans(formula,connect = 1)
+    gplots::plotmeans(formula,connect = 1,xlab = xname, ylab = yname)
     print(anova(ano.model))
     cat(" \n ")
     print(TukeyHSD(ano.model))
   }else if (assumption=="F"|assumption==2) {
-    boxplot(formula)
+    boxplot(formula,xlab = xname, ylab = yname)
     print(kruskal.test(formula))
     print(FSA::dunnTest(formula))
   }
@@ -121,8 +121,6 @@ auto.lm<- function(formula, data=NULL,xname=substitute(x),yname=substitute(y)){
   dx<-paste(d,"$",x)
   dy<-paste(d,"$",x)
 
-  print(list(dx,dy))
-
   m<-lm(formula)
   par(mfrow=c(2,2))
   plot(m)
@@ -134,13 +132,8 @@ auto.lm<- function(formula, data=NULL,xname=substitute(x),yname=substitute(y)){
 }
 
 auto.t <- function(x, ...) UseMethod("auto.t")
-require(tidyverse)
-require(gplots)
-require(car)
-require(Rmisc)
 
-
-auto.t.default <- function(x, y = NULL,mu = 0, paired = FALSE, var.equal = FALSE,xname = as.character(deparse(substitute(x))),yname = as.character(deparse(substitute(y))),...)
+auto.t.default <- function(x, y = NULL,mu = 0, paired = FALSE,xname = as.character(deparse(substitute(x))),yname = as.character(deparse(substitute(y))),...)
 {
   if (is.null(y)) {
     #One sample----
@@ -214,7 +207,6 @@ auto.t.default <- function(x, y = NULL,mu = 0, paired = FALSE, var.equal = FALSE
     }
   }
 }
-
 
 auto.t.formula <-   function(formula,data=NULL,xname=xnamet,yname=ynamet,...)
 {
