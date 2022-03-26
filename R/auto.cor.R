@@ -1,4 +1,4 @@
-auto.corr <- function(x,y,
+auto.cor <- function(x,y,
                       xname=deparse(substitute(x)),
                       yname=deparse(substitute(y))){
 

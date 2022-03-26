@@ -1,6 +1,5 @@
 \name{auto.chisq}
 \alias{auto.chisq}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{autometic selection, execution and visualization of Chi square test or Kruskal- Wallis test
 }
 \description{

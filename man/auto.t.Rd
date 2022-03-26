@@ -27,6 +27,9 @@ auto.t(formula, data, xname=xnamet,yname=ynamet,...)
 
   \item{yname}{a character string specify the name of the y variable and axis label}
 }
+\author{
+Tsz Hong Chan
+}
 \description{
 automatically select,conduct and visualize the results of t-tests and its non-parametric alternatives(e.g. Wilcox's rank sum test and sign test).
 
