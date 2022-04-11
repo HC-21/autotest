@@ -1,5 +1,7 @@
 # autotest
-automatic inferential statistic selection, execution and visualisation
+automatic inferential statistic selection, execution and visualisation 
+
+by Tsz-Hong Chan
 
 autotest is a package designed for the rapid execution of inferential statistics 
 
