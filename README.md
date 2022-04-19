@@ -1,5 +1,5 @@
 # autotest
-automatic inferential statistic selection, execution and visualisation 
+automatic inferential test selection, execution and visualisation 
 
 by Tsz-Hong Chan
 
